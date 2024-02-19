@@ -23,10 +23,10 @@
             audio: false,
             video: { facingMode: 'environment' }
         })
-            .then(stream => {
-                video.srcObject = stream;
-                video.play();
-            });
+        .then(stream => {
+            video.srcObject = stream;
+            video.play();
+        })
 
         const loop = classifier => {
             classifier.classify().then(results => {
